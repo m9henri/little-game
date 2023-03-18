@@ -1,0 +1,15 @@
+C:\Users\Henri\Desktop\Challenge 7\bin\Debug\net6.0\Challenge 7.exe
+C:\Users\Henri\Desktop\Challenge 7\bin\Debug\net6.0\Challenge 7.deps.json
+C:\Users\Henri\Desktop\Challenge 7\bin\Debug\net6.0\Challenge 7.runtimeconfig.json
+C:\Users\Henri\Desktop\Challenge 7\bin\Debug\net6.0\Challenge 7.dll
+C:\Users\Henri\Desktop\Challenge 7\bin\Debug\net6.0\Challenge 7.pdb
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.csproj.AssemblyReference.cache
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.AssemblyInfoInputs.cache
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.AssemblyInfo.cs
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.csproj.CoreCompileInputs.cache
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.dll
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\refint\Challenge 7.dll
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.pdb
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\Challenge 7.genruntimeconfig.cache
+C:\Users\Henri\Desktop\Challenge 7\obj\Debug\net6.0\ref\Challenge 7.dll
