@@ -1,4 +1,4 @@
-﻿namespace Challenge_7;
+﻿namespace Command;
 class Commands
 {
     public static void help() {
