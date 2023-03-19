@@ -2,8 +2,8 @@
 class Commands
 {
     public static void help() {
-        Console.WriteLine("'help' = shows all commands");
-        Console.WriteLine("'stop' = stop the program");
+        Console.WriteLine("\n'help' = shows all commands");
+        Console.WriteLine("'stop' = stop the program\n ");
     }
 }
 
