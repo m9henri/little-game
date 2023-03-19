@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Henri\\Desktop\\Challenge 7\\Challenge 7.csproj",
+      "projectUniqueName": "C:\\Users\\Henri\\Desktop\\commands\\Challenge 7.csproj",
       "projectName": "Challenge 7",
-      "projectPath": "C:\\Users\\Henri\\Desktop\\Challenge 7\\Challenge 7.csproj",
+      "projectPath": "C:\\Users\\Henri\\Desktop\\commands\\Challenge 7.csproj",
       "packagesPath": "C:\\Users\\Henri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Henri\\Desktop\\Challenge 7\\obj\\",
+      "outputPath": "C:\\Users\\Henri\\Desktop\\commands\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Henri\\AppData\\Roaming\\NuGet\\NuGet.Config"

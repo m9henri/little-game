@@ -13,8 +13,9 @@ class Program
     {
         int while0 = 1; //won't work w/o var. (idk why)
         int while1 = 1;
-        
         string? input = "a";
+
+        Console.WriteLine("Type 'help' for help");
 
         while (while0 == while1) //infinite amount of commands
         {
