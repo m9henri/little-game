@@ -3,7 +3,7 @@ class Commands
 {
     public static void changeBGColor() {
         Console.WriteLine("What color do you want?");
-        Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nMagenta\nred\nwhite\nyellow");
+        Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nmagenta\nred\nwhite\nyellow");
         string? txtColor = Console.ReadLine();
         switch (txtColor) {
             case "black":
