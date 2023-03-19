@@ -4,7 +4,7 @@ class Commands
     public static void changeBGColor() {
         Console.WriteLine("What color do you want?");
         Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nMagenta\nred\nwhite\nyellow");
-        string txtColor = Console.ReadLine();
+        string? txtColor = Console.ReadLine();
         switch (txtColor) {
             case "black":
                 Console.BackgroundColor = ConsoleColor.Black;
@@ -41,8 +41,8 @@ class Commands
 
     public static void changeTextColor() {
         Console.WriteLine("What color do you want?");
-        Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nMagenta\nred\nwhite\nyellow");
-        string txtColor = Console.ReadLine();
+        Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nmagenta\nred\nwhite\nyellow");
+        string? txtColor = Console.ReadLine();
         switch (txtColor) {
             case "black":
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -108,7 +108,7 @@ class Program
             if (input == "change color") {
                 Console.WriteLine("What do you want to change?");
                 Console.WriteLine("background color\ntext color");
-                string colorChange = Console.ReadLine();
+                string? colorChange = Console.ReadLine();
                 if (colorChange == "background color") {
                     Commands.changeBGColor();
                 }
