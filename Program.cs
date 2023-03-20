@@ -116,6 +116,9 @@ class Program
                     Commands.changeTextColor();
                 }
             }
+            if (input == "secret") {
+                Console.WriteLine("This is a secret");
+            }
         }
     }
 }
