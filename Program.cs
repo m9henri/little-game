@@ -114,8 +114,6 @@ class Program
                 }
                 if (colorChange == "text color") {
                     Commands.changeTextColor();
-                } else {
-                    Console.WriteLine("invalid");
                 }
             }
         }
