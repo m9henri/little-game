@@ -6,7 +6,7 @@ class Commands
         double num01 = Convert.ToDouble(Console.ReadLine());
         double num02 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("Finally, input an operator:");
-        string op = Console.ReadLine();
+        string? op = Console.ReadLine();
         switch (op) {
             case "+":
                 double answerpl = num01 + num02;
@@ -105,11 +105,58 @@ class Commands
         }
     }
 
+    public static void headsOrTails() {
+        int hotNum = 0;
+        Random hot = new Random();
+        Console.WriteLine("Type in 'heads' or 'tails'.");
+        string? hdsOrTls = Console.ReadLine();
+        if (hdsOrTls == "heads") {
+            hotNum = 1;
+        }
+        if (hdsOrTls == "tails") {
+            hotNum = 2;
+        }
+        int hotChn = hot.Next(1, 3);
+        if (hotChn == hotNum) {
+            Console.WriteLine("Congrats you win.");
+            if (hotChn == 1) {
+                Console.WriteLine("It was heads.");
+            }
+            if (hotChn == 2) {
+                Console.WriteLine("It was tails.");
+            }
+        }
+        if (hotChn != hotNum) {
+            Console.WriteLine("Sorry, you didn't win.");
+            if (hotChn == 1) {
+                Console.WriteLine("It was heads.\nWanna play again?\nyes\nno");
+                string? hotpa = Console.ReadLine();
+                if (hotpa == "yes") {
+                    Commands.headsOrTails();
+                }
+                if (hotpa == "no") {
+                    Console.WriteLine("ok. we won't play again. :(");
+                }
+            }
+            if (hotChn == 2) {
+                Console.WriteLine("It was Tails.\nWanna play again?\nyes\nno");
+                string? hotpa = Console.ReadLine();
+                if (hotpa == "yes") {
+                    Commands.headsOrTails();
+                }
+                if (hotpa == "no") {
+                    Console.WriteLine("ok. we won't play again. :(");
+                }
+            }
+        }
+    }
+
     public static void help() {
         Console.WriteLine("'help' = shows all commands");
         Console.WriteLine("'stop' = stop the program");
         Console.WriteLine("'change color' = changes the color");
         Console.WriteLine("'calc' = opens a calucator");
+        Console.WriteLine("'heads or tails' = play heads or tails");
     }
 }
 
@@ -150,6 +197,9 @@ class Program
             }
             if (input == "calc") {
                 Commands.calc();
+            }
+            if (input == "heads or tails") {
+                Commands.headsOrTails();
             }
         }
     }
