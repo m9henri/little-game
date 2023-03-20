@@ -27,6 +27,7 @@ class Commands
                 Console.WriteLine("invalid");
                 break;
         }
+        Console.WriteLine("--Calculator ended--");
     }
     
     public static void changeBGColor() {
@@ -65,6 +66,7 @@ class Commands
                 Console.WriteLine("invalid");
                 break;
         }
+        Console.WriteLine("--Color Change ended--");
     }
 
     public static void changeTextColor() {
@@ -103,6 +105,7 @@ class Commands
                 Console.WriteLine("invalid");
                 break;
         }
+        Console.WriteLine("--Color Change ended--");
     }
 
     public static void headsOrTails() {
@@ -121,9 +124,11 @@ class Commands
             Console.WriteLine("Congrats you win.");
             if (hotChn == 1) {
                 Console.WriteLine("It was heads.");
+                Console.WriteLine("--Heads or Tails ended--");
             }
             if (hotChn == 2) {
                 Console.WriteLine("It was tails.");
+                Console.WriteLine("--Heads or Tails ended--");
             }
         }
         if (hotChn != hotNum) {
@@ -136,6 +141,7 @@ class Commands
                 }
                 if (hotpa == "no") {
                     Console.WriteLine("ok. we won't play again. :(");
+                    Console.WriteLine("--Heads or Tails ended--");
                 }
             }
             if (hotChn == 2) {
@@ -146,6 +152,7 @@ class Commands
                 }
                 if (hotpa == "no") {
                     Console.WriteLine("ok. we won't play again. :(");
+                    Console.WriteLine("--Heads or Tails ended--");
                 }
             }
         }
