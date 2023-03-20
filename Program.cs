@@ -1,6 +1,34 @@
 ﻿namespace Command;
 class Commands
 {
+    public static void calc() {
+        Console.WriteLine("Input 2 numbers:");
+        double num01 = Convert.ToDouble(Console.ReadLine());
+        double num02 = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Finally, input an operator:");
+        string op = Console.ReadLine();
+        switch (op) {
+            case "+":
+                double answerpl = num01 + num02;
+                Console.WriteLine(answerpl);
+                break;
+            case "-":
+                double answermi = num01 - num02;
+                Console.WriteLine(answermi);
+                break;
+            case "*":
+                double answerti = num01 * num02;
+                Console.WriteLine(answerti);
+                break;
+            case "/":
+                double answerdi = num01 / num02;
+                break;
+            default:
+                Console.WriteLine("invalid");
+                break;
+        }
+    }
+    
     public static void changeBGColor() {
         Console.WriteLine("What color do you want?");
         Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nmagenta\nred\nwhite\nyellow");
@@ -81,6 +109,7 @@ class Commands
         Console.WriteLine("'help' = shows all commands");
         Console.WriteLine("'stop' = stop the program");
         Console.WriteLine("'change color' = changes the color");
+        Console.WriteLine("'calc' = opens a calucator");
     }
 }
 
@@ -118,6 +147,9 @@ class Program
             }
             if (input == "secret") {
                 Console.WriteLine("This is a secret");
+            }
+            if (input == "calc") {
+                Commands.calc();
             }
         }
     }
