@@ -5,7 +5,7 @@ class Commands
         Console.WriteLine("Input 2 numbers:");
         double num01 = Convert.ToDouble(Console.ReadLine());
         double num02 = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Finally, input an operator:");
+        Console.WriteLine("Finally, input an operator: \n + (addition),\n - (subtraction),\n * (multiplication),\n / (division),\n to the power of,\n root of (only 1st number)");
         string? op = Console.ReadLine();
         switch (op) {
             case "+":
@@ -22,6 +22,15 @@ class Commands
                 break;
             case "/":
                 double answerdi = num01 / num02;
+                Console.WriteLine(answerdi);
+                break;
+            case "to the power of":
+                double answerpow = Math.Pow(num01, num02);
+                Console.WriteLine(answerpow);
+                break;
+            case "root of":
+                double answerroot = Math.Sqrt(num01);
+                Console.WriteLine(answerroot);
                 break;
             default:
                 Console.WriteLine("invalid");
