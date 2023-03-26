@@ -5,7 +5,7 @@ class Commands
         Console.WriteLine("Input 2 numbers:");
         double num01 = Convert.ToDouble(Console.ReadLine());
         double num02 = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Finally, input an operator: \n + (addition),\n - (subtraction),\n * (multiplication),\n / (division),\n to the power of,\n root of (only 1st number)");
+        Console.WriteLine("Finally, input an operator: \n + (addition),\n - (subtraction),\n * (multiplication),\n / (division),\n to the power of,\n square root (only 1st number)");
         string? op = Console.ReadLine();
         switch (op) {
             case "+":
@@ -28,7 +28,7 @@ class Commands
                 double answerpow = Math.Pow(num01, num02);
                 Console.WriteLine(answerpow);
                 break;
-            case "root of":
+            case "square root":
                 double answerroot = Math.Sqrt(num01);
                 Console.WriteLine(answerroot);
                 break;
