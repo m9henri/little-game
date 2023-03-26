@@ -1,4 +1,4 @@
-﻿namespace Command;
+﻿namespace Commands;
 class Commands
 {
     public static void calc() {
