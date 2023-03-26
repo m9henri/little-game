@@ -29,38 +29,84 @@ class Commands
         }
         Console.WriteLine("--Calculator ended--");
     }
-    
+
+    public static string bgColor = "black";
     public static void changeBGColor() {
         Console.WriteLine("What color do you want?");
-        Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nmagenta\nred\nwhite\nyellow");
-        string? txtColor = Console.ReadLine();
-        switch (txtColor) {
+        Console.WriteLine("black\nblue\ncyan\ngrey\ngreen\nmagenta\nred\nwhite\nyellow");
+        string? bgColorInput = Console.ReadLine();
+        switch (bgColorInput) {
             case "black":
-                Console.BackgroundColor = ConsoleColor.Black;
+                bgColor = "black";
+                if(txtColor != "black") {
+                    Console.BackgroundColor = ConsoleColor.Black;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "blue":
-                Console.BackgroundColor = ConsoleColor.Blue;
+                bgColor = "blue";
+                if(txtColor != "blue") {
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "cyan":
-                Console.BackgroundColor = ConsoleColor.Cyan;
+                bgColor = "cyan";
+                if (txtColor != "cyan") {
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
-            case "gray":
-                Console.BackgroundColor = ConsoleColor.Gray;
+            case "grey":
+                bgColor = "grey";
+                if (txtColor != "grey") {
+                    Console.BackgroundColor = ConsoleColor.Gray;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "green":
-                Console.BackgroundColor = ConsoleColor.Green;
+                bgColor = "green";
+                if (txtColor != "green") {
+                    Console.BackgroundColor = ConsoleColor.Green;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "magenta":
-                Console.BackgroundColor = ConsoleColor.Magenta;
+                bgColor = "magenta";
+                if (txtColor != "magenta") {
+                    Console.BackgroundColor = ConsoleColor.Magenta;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "red":
-                Console.BackgroundColor = ConsoleColor.Red;
+                bgColor = "red";
+                if (txtColor != "red") {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "white":
-                Console.BackgroundColor = ConsoleColor.White;
+                bgColor = "white";
+                if (txtColor != "white") {
+                    Console.BackgroundColor = ConsoleColor.White;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "yellow":
-                Console.BackgroundColor = ConsoleColor.Yellow;
+                bgColor = "yellow";
+                if (txtColor != "yellow") {
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             default:
                 Console.WriteLine("invalid");
@@ -69,37 +115,83 @@ class Commands
         Console.WriteLine("--Color Change ended--");
     }
 
+    public static string txtColor = "white";
     public static void changeTextColor() {
         Console.WriteLine("What color do you want?");
-        Console.WriteLine("black\nblue\ncyan\ngray\ngreen\nmagenta\nred\nwhite\nyellow");
-        string? txtColor = Console.ReadLine();
-        switch (txtColor) {
+        Console.WriteLine("black\nblue\ncyan\ngrey\ngreen\nmagenta\nred\nwhite\nyellow");
+        string? txtColorInput = Console.ReadLine();
+        switch (txtColorInput) {
             case "black":
-                Console.ForegroundColor = ConsoleColor.Black;
+                txtColor = "black";
+                if (bgColor != "black") {
+                    Console.ForegroundColor = ConsoleColor.Black;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "blue":
-                Console.ForegroundColor = ConsoleColor.Blue;
+                txtColor = "blue";
+                if (bgColor != "blue") {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "cyan":
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                txtColor = "cyan";
+                if (bgColor != "cyan") {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
-            case "gray":
-                Console.ForegroundColor = ConsoleColor.Gray;
+            case "grey":
+                txtColor = "grey";
+                if (bgColor != "grey") {
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "green":
-                Console.ForegroundColor = ConsoleColor.Green;
+                txtColor = "green";
+                if (bgColor != "green") {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "magenta":
-                Console.ForegroundColor = ConsoleColor.Magenta;
+                txtColor = "magenta";
+                if (bgColor != "magenta") {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "red":
-                Console.ForegroundColor = ConsoleColor.Red;
+                txtColor = "red";
+                if (bgColor != "red") {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "white":
-                Console.ForegroundColor = ConsoleColor.White;
+                txtColor = "white";
+                if (bgColor != "white") {
+                    Console.ForegroundColor = ConsoleColor.White;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             case "yellow":
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                txtColor = "yellow";
+                if (bgColor != "yellow") {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                } else {
+                    Console.WriteLine("Your text color and your background color would be the same.");
+                }
                 break;
             default:
                 Console.WriteLine("invalid");
@@ -221,13 +313,12 @@ class Program
                 while1 = 0;
             }
             if (input == "change color") {
-                Console.WriteLine("What do you want to change?");
-                Console.WriteLine("background color\ntext color");
-                string? colorChange = Console.ReadLine();
-                if (colorChange == "background color") {
+                Console.WriteLine("What do you want to change?\nbackground color\ntext color");
+                string? bgOrTxt = Console.ReadLine();
+                if (bgOrTxt == "background color") {
                     Commands.changeBGColor();
                 }
-                if (colorChange == "text color") {
+                if (bgOrTxt == "text color") {
                     Commands.changeTextColor();
                 }
             }
