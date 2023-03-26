@@ -236,6 +236,7 @@ class Commands
         }
         if (gNpa == "no") {
             Console.WriteLine("ok");
+            Console.WriteLine("--Number Guessing ended--");
         }
     }
 
