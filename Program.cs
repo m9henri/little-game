@@ -114,7 +114,8 @@ class Commands
         int gNInput = 0;
         int attempts = 0;
         int gNum1 = Convert.ToInt32(Console.ReadLine());
-        int gNum2 = Convert.ToInt32(Console.ReadLine());
+        int gNum2beta = Convert.ToInt32(Console.ReadLine());
+        int gNum2 = gNum2beta - 1;
         int randNum = numberGen.Next(gNum1, gNum2);
         while (gNInput != randNum) {
             Console.WriteLine("Input a number: ");
