@@ -214,8 +214,7 @@ class Commands
         Random numberGen = new Random();
         int gNInput = 0;
         int attempts = 0;
-        int gNum1beta = Convert.ToInt32(Console.ReadLine());
-        int gNum1 = gNum1beta + 1;
+        int gNum1 = Convert.ToInt32(Console.ReadLine());
         int gNum2beta = Convert.ToInt32(Console.ReadLine());
         int gNum2 = gNum2beta - 1;
         int randNum = numberGen.Next(gNum1, gNum2);
