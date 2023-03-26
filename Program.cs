@@ -108,9 +108,38 @@ class Commands
         Console.WriteLine("--Color Change ended--");
     }
 
+    public static void guessingNumbers() {
+        Console.WriteLine("Between what two numbers do you want to guess?");
+        Random numberGen = new Random();
+        int gNInput = 0;
+        int attempts = 0;
+        int gNum1 = Convert.ToInt32(Console.ReadLine());
+        int gNum2 = Convert.ToInt32(Console.ReadLine());
+        int randNum = numberGen.Next(gNum1, gNum2);
+        while (gNInput != randNum) {
+            Console.WriteLine("Input a number: ");
+            gNInput = Convert.ToInt32(Console.ReadLine());
+            if (gNInput < randNum) {
+                Console.WriteLine("Your number is smaller than the number you're guessing.");
+            }
+            if (gNInput > randNum) {
+                Console.WriteLine("Your number is higher than the number you're guessing.");
+            }
+            attempts++;
+        }
+        Console.WriteLine("Congrats!\nThe number was " + randNum + ".\nWanna play again?");
+        string? gNpa = Console.ReadLine();
+        if (gNpa == "yes") {
+            Commands.guessingNumbers();
+        }
+        if (gNpa == "no") {
+            Console.WriteLine("ok");
+        }
+    }
+
     public static void headsOrTails() {
         int hotNum = 0;
-        Random hot = new Random();
+        Random numberGen = new Random();
         Console.WriteLine("Type in 'heads' or 'tails'.");
         string? hdsOrTls = Console.ReadLine();
         if (hdsOrTls == "heads") {
@@ -119,7 +148,7 @@ class Commands
         if (hdsOrTls == "tails") {
             hotNum = 2;
         }
-        int hotChn = hot.Next(1, 3);
+        int hotChn = numberGen.Next(1, 3);
         if (hotChn == hotNum) {
             Console.WriteLine("Congrats you win.");
             if (hotChn == 1) {
@@ -140,7 +169,7 @@ class Commands
                     Commands.headsOrTails();
                 }
                 if (hotpa == "no") {
-                    Console.WriteLine("ok. we won't play again. :(");
+                    Console.WriteLine("ok.");
                     Console.WriteLine("--Heads or Tails ended--");
                 }
             }
@@ -164,6 +193,7 @@ class Commands
         Console.WriteLine("'change color' = changes the color");
         Console.WriteLine("'calc' = opens a calucator");
         Console.WriteLine("'heads or tails' = play heads or tails");
+        Console.WriteLine("'guessing numbers' = play a game where you guess specific numbers");
     }
 }
 
@@ -207,6 +237,9 @@ class Program
             }
             if (input == "heads or tails") {
                 Commands.headsOrTails();
+            }
+            if (input == "guessing numbers") {
+                Commands.guessingNumbers();
             }
         }
     }
