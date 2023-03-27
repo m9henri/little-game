@@ -1,7 +1,339 @@
 ﻿namespace Commands;
-class Commands
+
+class Language
 {
-    public static void calc() {
+    public static string overlayLanguage = "english";
+    public static void language() {
+        if (overlayLanguage == "deutsch") {
+            Console.WriteLine("Zu welcher Sprache möchtest du wechseln?\nenglisch");
+            string? languageInput = Console.ReadLine();
+            switch (languageInput) {
+                case "englisch":
+                    overlayLanguage = "english";
+                    Console.WriteLine("--Language successfully switched to English--");
+                    Console.WriteLine("Type 'help' for help.");
+                    break;
+            }
+        }
+        if (overlayLanguage == "english") {
+            Console.WriteLine("What language do you want to switch to?\ngerman");
+            string? languageInput = Console.ReadLine();
+            switch (languageInput) {
+                case "german":
+                    overlayLanguage = "deutsch";
+                    Console.WriteLine("--Sprache erfolgreich zu Deutsch gewechselt--");
+                    Console.WriteLine("Schreibe 'Hilfe' für Hilfe");
+                    break;
+            }
+        }
+    }
+}
+
+class Deutsch
+{
+    public static void Taschenrechner() {
+        Console.WriteLine("Gebe 2 Nummern ein:");
+        double num01 = Convert.ToDouble(Console.ReadLine());
+        double num02 = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Gebe jetzt einen Operator ein: \n + (addition),\n - (subtraktion),\n * (multiplikation),\n / (division),\n zur Potenz von,\n zur Quadratwurzel (nur die erste Zahl)");
+        string? op = Console.ReadLine();
+        switch (op) {
+            case "+":
+                double answerpl = num01 + num02;
+                Console.WriteLine(answerpl);
+                break;
+            case "-":
+                double answermi = num01 - num02;
+                Console.WriteLine(answermi);
+                break;
+            case "*":
+                double answerti = num01 * num02;
+                Console.WriteLine(answerti);
+                break;
+            case "/":
+                double answerdi = num01 / num02;
+                Console.WriteLine(answerdi);
+                break;
+            case "zur Potenz von":
+                double answerpow = Math.Pow(num01, num02);
+                Console.WriteLine(answerpow);
+                break;
+            case "zur Quadratwurzel":
+                double answerroot = Math.Sqrt(num01);
+                Console.WriteLine(answerroot);
+                break;
+            default:
+                Console.WriteLine("ungültig");
+                break;
+        }
+        Console.WriteLine("--Taschenrechner ist beendet--");
+    }
+
+    private static string bgColor = "black";
+    public static void Hintergrundfarbenänderer() {
+        Console.WriteLine("Welche Farbe möchstest du haben?");
+        Console.WriteLine("schwarz\nblau\ntürkis\ngrau\ngrün\nmagenta\nrot\nweiß\ngelb");
+        string? bgColorInput = Console.ReadLine();
+        switch (bgColorInput) {
+            case "schwarz":
+                bgColor = "black";
+                if(txtColor != "black") {
+                    Console.BackgroundColor = ConsoleColor.Black;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "blau":
+                bgColor = "blue";
+                if(txtColor != "blue") {
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "türkis":
+                bgColor = "cyan";
+                if (txtColor != "cyan") {
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "grau":
+                bgColor = "grey";
+                if (txtColor != "grey") {
+                    Console.BackgroundColor = ConsoleColor.Gray;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "grün":
+                bgColor = "green";
+                if (txtColor != "green") {
+                    Console.BackgroundColor = ConsoleColor.Green;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "magenta":
+                bgColor = "magenta";
+                if (txtColor != "magenta") {
+                    Console.BackgroundColor = ConsoleColor.Magenta;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "rot":
+                bgColor = "red";
+                if (txtColor != "red") {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "weiß":
+                bgColor = "white";
+                if (txtColor != "white") {
+                    Console.BackgroundColor = ConsoleColor.White;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "gelb":
+                bgColor = "yellow";
+                if (txtColor != "yellow") {
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            default:
+                Console.WriteLine("ungültig");
+                break;
+        }
+        Console.WriteLine("--Farbenänderer ist beendet--");
+    }
+
+    private static string txtColor = "white";
+    public static void Textfarbenänderer() {
+        Console.WriteLine("Welche Farbe möchtest du haben?");
+        Console.WriteLine("schwarz\nblau\ntürkis\ngrau\ngrün\nmagenta\nrot\nweiß\ngelb");
+        string? txtColorInput = Console.ReadLine();
+        switch (txtColorInput) {
+            case "schwarz":
+                txtColor = "black";
+                if (bgColor != "black") {
+                    Console.ForegroundColor = ConsoleColor.Black;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "blau":
+                txtColor = "blue";
+                if (bgColor != "blue") {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "türkis":
+                txtColor = "cyan";
+                if (bgColor != "cyan") {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "grau":
+                txtColor = "grey";
+                if (bgColor != "grey") {
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "grün":
+                txtColor = "green";
+                if (bgColor != "green") {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "magenta":
+                txtColor = "magenta";
+                if (bgColor != "magenta") {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "rot":
+                txtColor = "red";
+                if (bgColor != "red") {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "weiß":
+                txtColor = "white";
+                if (bgColor != "white") {
+                    Console.ForegroundColor = ConsoleColor.White;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            case "gelb":
+                txtColor = "yellow";
+                if (bgColor != "yellow") {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                } else {
+                    Console.WriteLine("Deine Text- und Hintergrundfarbe würden die gleichen sein.");
+                }
+                break;
+            default:
+                Console.WriteLine("ungültig");
+                break;
+        }
+        Console.WriteLine("--Farbenänderer ist beendet--");
+    }
+
+    public static void ZahlenRaten() {
+        Console.WriteLine("Zwischen welchen Nummern möchtest du die Zahl raten.");
+        Random numberGen = new Random();
+        int gNInput = 0;
+        int attempts = 0;
+        int gNum1 = Convert.ToInt32(Console.ReadLine());
+        int gNum2beta = Convert.ToInt32(Console.ReadLine());
+        int gNum2 = gNum2beta - 1;
+        int randNum = numberGen.Next(gNum1, gNum2);
+        while (gNInput != randNum) {
+            Console.WriteLine("Gebe eine Zahl ein: ");
+            gNInput = Convert.ToInt32(Console.ReadLine());
+            if (gNInput < randNum) {
+                Console.WriteLine("Deine Nummer ist kleiner als die Nummer die du erraten sollst.");
+            }
+            if (gNInput > randNum) {
+                Console.WriteLine("Deine Nummer ist größer als die Nummer die du erraten sollst.");
+            }
+            attempts++;
+        }
+        Console.WriteLine("Glückwunsch!\nDie Nummer war " + randNum + " und du brauchtest " + attempts + " Versuche.\nNochmal spielen?");
+        string? gNpa = Console.ReadLine();
+        if (gNpa == "ja") {
+            English.GuessingNumbers();
+        }
+        if (gNpa == "nein") {
+            Console.WriteLine("ok");
+            Console.WriteLine("--Zahlen Raten ist beendet--");
+        }
+    }
+
+    public static void KopfOderZahl() {
+        int hotNum = 0;
+        Random numberGen = new Random();
+        Console.WriteLine("Kopf oder Zahl?.");
+        string? hdsOrTls = Console.ReadLine();
+        if (hdsOrTls == "Kopf") {
+            hotNum = 1;
+        }
+        if (hdsOrTls == "Zahl") {
+            hotNum = 2;
+        }
+        int hotChn = numberGen.Next(1, 3);
+        if (hotChn == hotNum) {
+            Console.WriteLine("Glückwunsch, du hast gewonnen.");
+            if (hotChn == 1) {
+                Console.WriteLine("Es war Kopf.");
+                Console.WriteLine("--Kopf oder Zahl ist beendet--");
+            }
+            if (hotChn == 2) {
+                Console.WriteLine("Es war Zahl.");
+                Console.WriteLine("--Kopf oder Zahl ist beendet--");
+            }
+        }
+        if (hotChn != hotNum) {
+            Console.WriteLine("Du hast nicht gewonnen.");
+            if (hotChn == 1) {
+                Console.WriteLine("Es war Kopf.\nNochmal spielen?\nja\nnein");
+                string? hotpa = Console.ReadLine();
+                if (hotpa == "ja") {
+                    English.HeadsOrTails();
+                }
+                if (hotpa == "nein") {
+                    Console.WriteLine("ok.");
+                    Console.WriteLine("--Kopf oder Zahl ist beendet--");
+                }
+            }
+            if (hotChn == 2) {
+                Console.WriteLine("Es war Zahl.\nNochmal spielen?\nja\nnein");
+                string? hotpa = Console.ReadLine();
+                if (hotpa == "ja") {
+                    English.HeadsOrTails();
+                }
+                if (hotpa == "nein") {
+                    Console.WriteLine("ok.");
+                    Console.WriteLine("--Kopf oder Zahl ist beendet--");
+                }
+            }
+        }
+    }
+
+    public static void Hilfe() {
+        Console.WriteLine("'Hilfe' = shows all commands");
+        Console.WriteLine("'Stopp' = stoppt das Programm");
+        Console.WriteLine("'Farbenveränderer' = verändert die Farben");
+        Console.WriteLine("'Taschenrechner' = öffnet den Taschenrechner");
+        Console.WriteLine("'Kopf oder Zahl' = lässt dich Kopf oder Zahl spielen");
+        Console.WriteLine("'Zahlen raten' = lässt dich ein Spiel spielen, wo du eine bestimmte Zahl erraten musst");
+        Console.WriteLine("'Sprache' = lässt dich die Sprache einstellen");
+    }
+}
+
+class English
+{
+    public static void Calc() {
         Console.WriteLine("Input 2 numbers:");
         double num01 = Convert.ToDouble(Console.ReadLine());
         double num02 = Convert.ToDouble(Console.ReadLine());
@@ -39,8 +371,8 @@ class Commands
         Console.WriteLine("--Calculator ended--");
     }
 
-    public static string bgColor = "black";
-    public static void changeBGColor() {
+    private static string bgColor = "black";
+    public static void ChangeBGColor() {
         Console.WriteLine("What color do you want?");
         Console.WriteLine("black\nblue\ncyan\ngrey\ngreen\nmagenta\nred\nwhite\nyellow");
         string? bgColorInput = Console.ReadLine();
@@ -124,8 +456,8 @@ class Commands
         Console.WriteLine("--Color Change ended--");
     }
 
-    public static string txtColor = "white";
-    public static void changeTextColor() {
+    private static string txtColor = "white";
+    public static void ChangeTextColor() {
         Console.WriteLine("What color do you want?");
         Console.WriteLine("black\nblue\ncyan\ngrey\ngreen\nmagenta\nred\nwhite\nyellow");
         string? txtColorInput = Console.ReadLine();
@@ -209,7 +541,7 @@ class Commands
         Console.WriteLine("--Color Change ended--");
     }
 
-    public static void guessingNumbers() {
+    public static void GuessingNumbers() {
         Console.WriteLine("Between what two numbers do you want to guess?");
         Random numberGen = new Random();
         int gNInput = 0;
@@ -229,10 +561,10 @@ class Commands
             }
             attempts++;
         }
-        Console.WriteLine("Congrats!\nThe number was " + randNum + ".\nWanna play again?");
+        Console.WriteLine("Congrats!\nThe number was " + randNum + " and you needed " + attempts + " attempts.\nWanna play again?");
         string? gNpa = Console.ReadLine();
         if (gNpa == "yes") {
-            Commands.guessingNumbers();
+            English.GuessingNumbers();
         }
         if (gNpa == "no") {
             Console.WriteLine("ok");
@@ -240,7 +572,7 @@ class Commands
         }
     }
 
-    public static void headsOrTails() {
+    public static void HeadsOrTails() {
         int hotNum = 0;
         Random numberGen = new Random();
         Console.WriteLine("Type in 'heads' or 'tails'.");
@@ -269,7 +601,7 @@ class Commands
                 Console.WriteLine("It was heads.\nWanna play again?\nyes\nno");
                 string? hotpa = Console.ReadLine();
                 if (hotpa == "yes") {
-                    Commands.headsOrTails();
+                    English.HeadsOrTails();
                 }
                 if (hotpa == "no") {
                     Console.WriteLine("ok.");
@@ -280,23 +612,24 @@ class Commands
                 Console.WriteLine("It was Tails.\nWanna play again?\nyes\nno");
                 string? hotpa = Console.ReadLine();
                 if (hotpa == "yes") {
-                    Commands.headsOrTails();
+                    English.HeadsOrTails();
                 }
                 if (hotpa == "no") {
-                    Console.WriteLine("ok. we won't play again. :(");
+                    Console.WriteLine("ok.");
                     Console.WriteLine("--Heads or Tails ended--");
                 }
             }
         }
     }
 
-    public static void help() {
+    public static void Help() {
         Console.WriteLine("'help' = shows all commands");
         Console.WriteLine("'stop' = stop the program");
         Console.WriteLine("'change color' = changes the color");
         Console.WriteLine("'calc' = opens a calucator");
         Console.WriteLine("'heads or tails' = play heads or tails");
         Console.WriteLine("'guessing numbers' = play a game where you guess specific numbers");
+        Console.WriteLine("'language' = changes the language");
     }
 }
 
@@ -305,43 +638,88 @@ class Program
     static void Main(string[] args)
     {
         Console.Title = "little game";
-        
         int while0 = 1;
         int while1 = 1;
-        string? input = "a";
+        string? input = "you don't need this";
 
-        Console.WriteLine("Type 'help' for help");
+        Console.WriteLine("Type 'Help' for Help");
 
         while (while0 == while1)
         {
             input = Console.ReadLine();
-            if (input == "help") {
-                Commands.help();
-            }
-            if (input == "stop") {
-                while1 = 0;
-            }
-            if (input == "change color") {
-                Console.WriteLine("What do you want to change?\nbackground color\ntext color");
-                string? bgOrTxt = Console.ReadLine();
-                if (bgOrTxt == "background color") {
-                    Commands.changeBGColor();
+            if (Language.overlayLanguage == "english") {
+                switch (input) {
+                    case "calc":
+                        English.Calc();
+                        break;
+                    case "change color":
+                        Console.WriteLine("What do you want to change?\nbackground color\ntext color");
+                        string? bgOrTxt = Console.ReadLine();
+                        switch (bgOrTxt) {
+                            case "background color":
+                                English.ChangeBGColor();
+                                break;
+                            case "text color":
+                                English.ChangeTextColor();
+                                break;
+                        }
+                        break;
+                    case "guessing numbers":
+                        English.GuessingNumbers();
+                        break;
+                    case "heads or tails":
+                        English.HeadsOrTails();
+                        break;
+                    case "help":
+                        English.Help();
+                        break;
+                    case "language":
+                        Language.language();
+                        break;
+                    case "secret":
+                        Console.WriteLine("This is a secret");
+                        break;
+                    case "stop":
+                        while1 = 0;
+                        break;
                 }
-                if (bgOrTxt == "text color") {
-                    Commands.changeTextColor();
+            }
+            if (Language.overlayLanguage == "deutsch") {
+                switch (input) {
+                    case "Farbenveränderer":
+                        Console.WriteLine("Was möchtest du verändern?\nHintergrundfarbe\nTextfarbe");
+                        string? bgOrTxt = Console.ReadLine();
+                        switch (bgOrTxt) {
+                            case "Hintergrundfarbe":
+                                Deutsch.Hintergrundfarbenänderer();
+                                break;
+                            case "Textfarbe":
+                                Deutsch.Textfarbenänderer();
+                                break;
+                        }
+                        break;
+                    case "Geheimnis":
+                        Console.WriteLine("Dies ist ein Geheimnis.");
+                        break;
+                    case "Hilfe":
+                        Deutsch.Hilfe();
+                        break;
+                    case "Kopf oder Zahl":
+                        Deutsch.KopfOderZahl();
+                        break;
+                    case "Sprache":
+                        Language.language();
+                        break;
+                    case "Stopp":
+                        while1 = 0;
+                        break;
+                    case "Taschenrechner":
+                        Deutsch.Taschenrechner();
+                        break;
+                    case "Zahlen raten":
+                        Deutsch.ZahlenRaten();
+                        break;
                 }
-            }
-            if (input == "secret") {
-                Console.WriteLine("This is a secret");
-            }
-            if (input == "calc") {
-                Commands.calc();
-            }
-            if (input == "heads or tails") {
-                Commands.headsOrTails();
-            }
-            if (input == "guessing numbers") {
-                Commands.guessingNumbers();
             }
         }
     }
