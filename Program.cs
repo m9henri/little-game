@@ -321,7 +321,7 @@ class Deutsch
     }
 
     public static void Hilfe() {
-        Console.WriteLine("'Hilfe' = shows all commands");
+        Console.WriteLine("'Hilfe' = zeigt alle Möglichkeiten");
         Console.WriteLine("'Stopp' = stoppt das Programm");
         Console.WriteLine("'Farbenveränderer' = verändert die Farben");
         Console.WriteLine("'Taschenrechner' = öffnet den Taschenrechner");
@@ -642,7 +642,7 @@ class Program
         int while1 = 1;
         string? input = "you don't need this";
 
-        Console.WriteLine("Type 'Help' for Help");
+        Console.WriteLine("Type 'help' for help");
 
         while (while0 == while1)
         {
