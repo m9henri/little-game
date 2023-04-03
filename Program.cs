@@ -328,6 +328,17 @@ class Deutsch
         Console.WriteLine("'Kopf oder Zahl' = lässt dich Kopf oder Zahl spielen");
         Console.WriteLine("'Zahlen raten' = lässt dich ein Spiel spielen, wo du eine bestimmte Zahl erraten musst");
         Console.WriteLine("'Sprache' = lässt dich die Sprache einstellen");
+        Console.WriteLine("'Timer' = erschafft einen Timer, mit so viel Zeit, wie du eingegeben hast");
+    }
+
+    public static async void Timer() {
+        Console.WriteLine("Für wie viele Sekunden möchtest du den Timer einstellen?");
+        int secTimer = Convert.ToInt32(Console.ReadLine());
+        await Task.Delay(secTimer * 1000);
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Dein Timer ist vorüber.");
+        }
     }
 }
 
@@ -630,6 +641,17 @@ class English
         Console.WriteLine("'heads or tails' = play heads or tails");
         Console.WriteLine("'guessing numbers' = play a game where you guess specific numbers");
         Console.WriteLine("'language' = changes the language");
+        Console.WriteLine("'timer' = creates a timer with the amount of time you typed in");
+    }
+
+    public static async void Timer() {
+        Console.WriteLine("How many seconds do you want to set the timer?");
+        int secTimer = Convert.ToInt32(Console.ReadLine());
+        await Task.Delay(secTimer * 1000);
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Your timer is over.");
+        }
     }
 }
 
@@ -682,6 +704,9 @@ class Program
                     case "stop":
                         while1 = 0;
                         break;
+                    case "timer":
+                        English.Timer();
+                        break;
                 }
             }
             if (Language.overlayLanguage == "deutsch") {
@@ -715,6 +740,9 @@ class Program
                         break;
                     case "Taschenrechner":
                         Deutsch.Taschenrechner();
+                        break;
+                    case "Timer":
+                        Deutsch.Timer();
                         break;
                     case "Zahlen raten":
                         Deutsch.ZahlenRaten();
