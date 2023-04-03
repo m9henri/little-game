@@ -4,27 +4,29 @@ class Language
 {
     public static string overlayLanguage = "english";
     public static void language() {
-        if (overlayLanguage == "deutsch") {
-            Console.WriteLine("Zu welcher Sprache möchtest du wechseln?\nenglisch");
-            string? languageInput = Console.ReadLine();
-            switch (languageInput) {
-                case "englisch":
-                    overlayLanguage = "english";
-                    Console.WriteLine("--Language successfully switched to English--");
-                    Console.WriteLine("Type 'help' for help.");
-                    break;
-            }
-        }
-        if (overlayLanguage == "english") {
-            Console.WriteLine("What language do you want to switch to?\ngerman");
-            string? languageInput = Console.ReadLine();
-            switch (languageInput) {
-                case "german":
-                    overlayLanguage = "deutsch";
-                    Console.WriteLine("--Sprache erfolgreich zu Deutsch gewechselt--");
-                    Console.WriteLine("Schreibe 'Hilfe' für Hilfe");
-                    break;
-            }
+        switch (overlayLanguage) {
+            case "Deutsch":
+                Console.WriteLine("Zu welcher Sprache möchtest du wechseln?\nEnglisch");
+                string? germanLanguageInput = Console.ReadLine();
+                switch (germanLanguageInput) {
+                    case "Englisch":
+                        overlayLanguage = "english";
+                        Console.WriteLine("--Language successfully switched to English--");
+                        Console.WriteLine("Type 'help' for help.");
+                        break;
+                }
+                break;
+            case "english":
+                Console.WriteLine("What language do you want to switch to?\ngerman");
+                string? englishLanguageInput = Console.ReadLine();
+                switch (englishLanguageInput) {
+                    case "german":
+                        overlayLanguage = "Deutsch";
+                        Console.WriteLine("--Sprache erfolgreich zu Deutsch gewechselt--");
+                        Console.WriteLine("Schreibe 'Hilfe' für Hilfe");
+                        break;
+                }
+                break;
         }
     }
 }
@@ -332,12 +334,36 @@ class Deutsch
     }
 
     public static async void Timer() {
-        Console.WriteLine("Für wie viele Sekunden möchtest du den Timer einstellen?");
-        int secTimer = Convert.ToInt32(Console.ReadLine());
-        await Task.Delay(secTimer * 1000);
-        for (int i = 0; i < 5; i++)
-        {
-            Console.WriteLine("Dein Timer ist vorüber.");
+        Console.WriteLine("In welcher Zeit möchtest du den Timer einstellen?\nMillisekunden\nSekunden\nMinuten");
+        string? tMes = Console.ReadLine();
+        switch (tMes) {
+            case "Millisekunden":
+                Console.WriteLine("Zu wie vielen Millisekunden möchtest du den Timer einstellen?");
+                int msTimer = Convert.ToInt32(Console.ReadLine());
+                await Task.Delay(msTimer);
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Dein Timer ist vorüber.");
+                }
+                break;
+            case "Sekunden":
+                Console.WriteLine("Zu wie vielen Sekunden möchtest du den Timer einstellen?");
+                int sTimer = Convert.ToInt32(Console.ReadLine());
+                await Task.Delay(sTimer * 1000);
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Dein Timer ist vorüber.");
+                }
+                break;
+            case "Minuten":
+                Console.WriteLine("Zu wie vielen Minuten möchtest du den Timer einstellen?");
+                int minTimer = Convert.ToInt32(Console.ReadLine());
+                await Task.Delay(minTimer * 60000);
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Dein Timer ist vorüber.");
+                }
+                break;
         }
     }
 }
@@ -645,12 +671,36 @@ class English
     }
 
     public static async void Timer() {
-        Console.WriteLine("How many seconds do you want to set the timer?");
-        int secTimer = Convert.ToInt32(Console.ReadLine());
-        await Task.Delay(secTimer * 1000);
-        for (int i = 0; i < 5; i++)
-        {
-            Console.WriteLine("Your timer is over.");
+        Console.WriteLine("In what time measurement do you want to set the timer?\nmilliseconds\nseconds\nminutes");
+        string? tMes = Console.ReadLine();
+        switch (tMes) {
+            case "milliseconds":
+                Console.WriteLine("How many milliseconds do you want to set the timer?");
+                int msTimer = Convert.ToInt32(Console.ReadLine());
+                await Task.Delay(msTimer);
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Your timer is over.");
+                }
+                break;
+            case "seconds":
+                Console.WriteLine("How many seconds do you want to set the timer?");
+                int sTimer = Convert.ToInt32(Console.ReadLine());
+                await Task.Delay(sTimer * 1000);
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Your timer is over.");
+                }
+                break;
+            case "minutes":
+                Console.WriteLine("How many minutes do you want to set the timer?");
+                int minTimer = Convert.ToInt32(Console.ReadLine());
+                await Task.Delay(minTimer * 60000);
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Your timer is over.");
+                }
+                break;
         }
     }
 }
@@ -659,7 +709,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Title = "little game";
+        Console.Title = "cmd lmao";
         int while0 = 1;
         int while1 = 1;
         string? input = "you don't need this";
@@ -709,7 +759,7 @@ class Program
                         break;
                 }
             }
-            if (Language.overlayLanguage == "deutsch") {
+            if (Language.overlayLanguage == "Deutsch") {
                 switch (input) {
                     case "Farbenveränderer":
                         Console.WriteLine("Was möchtest du verändern?\nHintergrundfarbe\nTextfarbe");
