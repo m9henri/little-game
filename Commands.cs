@@ -241,6 +241,19 @@ class Deutsch
         Console.WriteLine("--Farbenänderer ist beendet--");
     }
 
+        public static void Titeländerer() {
+        string? newTitle;
+        Console.WriteLine("Zu was willst du den Titel ändern?");
+        newTitle = Console.ReadLine();
+        if (String.IsNullOrEmpty(newTitle) == true) {
+            Console.WriteLine("Versuchs nochmal.");
+            Console.ReadKey();
+            Deutsch.Titeländerer();
+        } else {
+            Console.Title = newTitle;
+        }
+    }
+
     public static void ZahlenRaten() {
         Console.WriteLine("Zwischen welchen Nummern möchtest du die Zahl raten.");
         Random numberGen = new Random();
@@ -264,7 +277,7 @@ class Deutsch
         Console.WriteLine("Glückwunsch!\nDie Nummer war " + randNum + " und du brauchtest " + attempts + " Versuche.\nNochmal spielen?");
         string? gNpa = Console.ReadLine();
         if (gNpa == "ja") {
-            English.GuessingNumbers();
+            Deutsch.ZahlenRaten();
         }
         if (gNpa == "nein") {
             Console.WriteLine("ok");
@@ -326,10 +339,13 @@ class Deutsch
         Console.WriteLine("'Hilfe' = zeigt alle Möglichkeiten");
         Console.WriteLine("'Stopp' = stoppt das Programm");
         Console.WriteLine("'Farbenveränderer' = verändert die Farben");
+        Console.WriteLine("'Titelveränderer' = Ändert den Titel des Fensters.");
         Console.WriteLine("'Taschenrechner' = öffnet den Taschenrechner");
+        Console.WriteLine("'Schließen' = schließt das Fenster");
         Console.WriteLine("'Kopf oder Zahl' = lässt dich Kopf oder Zahl spielen");
         Console.WriteLine("'Zahlen raten' = lässt dich ein Spiel spielen, wo du eine bestimmte Zahl erraten musst");
         Console.WriteLine("'Sprache' = lässt dich die Sprache einstellen");
+        Console.WriteLine("'Zurücksetzen' = Setzt das Fenster zurück");
         Console.WriteLine("'Timer' = erschafft einen Timer, mit so viel Zeit, wie du eingegeben hast");
     }
 
@@ -578,6 +594,19 @@ class English
         Console.WriteLine("--Color Change ended--");
     }
 
+    public static void ChangeTitle() {
+        string? newTitle;
+        Console.WriteLine("What do you want to change the title to?");
+        newTitle = Console.ReadLine();
+        if (String.IsNullOrEmpty(newTitle) == true) {
+            Console.WriteLine("You failed. Start again.");
+            Console.ReadKey();
+            English.ChangeTitle();
+        } else {
+            Console.Title = newTitle;
+        }
+    }
+
     public static void GuessingNumbers() {
         Console.WriteLine("Between what two numbers do you want to guess?");
         Random numberGen = new Random();
@@ -663,10 +692,13 @@ class English
         Console.WriteLine("'help' = shows all commands");
         Console.WriteLine("'stop' = stop the program");
         Console.WriteLine("'change color' = changes the color");
+        Console.WriteLine("'change title' = change the title of the terminal window");
         Console.WriteLine("'calc' = opens a calucator");
+        Console.WriteLine("'exit' = exits out of the window");
         Console.WriteLine("'heads or tails' = play heads or tails");
         Console.WriteLine("'guessing numbers' = play a game where you guess specific numbers");
         Console.WriteLine("'language' = changes the language");
+        Console.WriteLine("'reset' = reset the terminal window");
         Console.WriteLine("'timer' = creates a timer with the amount of time you typed in");
     }
 
@@ -709,10 +741,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Title = "cmd lmao";
         int while0 = 1;
         int while1 = 1;
-        string? input = "you don't need this";
+        string? input;
 
         Console.WriteLine("Type 'help' for help");
 
@@ -736,6 +767,12 @@ class Program
                                 break;
                         }
                         break;
+                    case "change title":
+                        English.ChangeTitle();
+                        break;
+                    case "exit":
+                        Environment.Exit(0);
+                        break;
                     case "guessing numbers":
                         English.GuessingNumbers();
                         break;
@@ -747,6 +784,9 @@ class Program
                         break;
                     case "language":
                         Language.language();
+                        break;
+                    case "reset":
+                        Console.Clear();
                         break;
                     case "secret":
                         Console.WriteLine("This is a secret");
@@ -782,6 +822,9 @@ class Program
                     case "Kopf oder Zahl":
                         Deutsch.KopfOderZahl();
                         break;
+                    case "Schließen":
+                        Environment.Exit(0);
+                        break;
                     case "Sprache":
                         Language.language();
                         break;
@@ -794,8 +837,14 @@ class Program
                     case "Timer":
                         Deutsch.Timer();
                         break;
+                    case "Titelveränderer":
+                        Deutsch.Titeländerer();
+                        break;
                     case "Zahlen raten":
                         Deutsch.ZahlenRaten();
+                        break;
+                    case "Zurücksetzen":
+                        Console.Clear();
                         break;
                 }
             }

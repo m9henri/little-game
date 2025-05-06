@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Henri\\Desktop\\commands\\Challenge 7.csproj": {}
+    "C:\\Users\\Henri\\Documents\\projects\\c#\\little-game-main\\Challenge 7.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Henri\\Desktop\\commands\\Challenge 7.csproj": {
+    "C:\\Users\\Henri\\Documents\\projects\\c#\\little-game-main\\Challenge 7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Henri\\Desktop\\commands\\Challenge 7.csproj",
+        "projectUniqueName": "C:\\Users\\Henri\\Documents\\projects\\c#\\little-game-main\\Challenge 7.csproj",
         "projectName": "Challenge 7",
-        "projectPath": "C:\\Users\\Henri\\Desktop\\commands\\Challenge 7.csproj",
+        "projectPath": "C:\\Users\\Henri\\Documents\\projects\\c#\\little-game-main\\Challenge 7.csproj",
         "packagesPath": "C:\\Users\\Henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Henri\\Desktop\\commands\\obj\\",
+        "outputPath": "C:\\Users\\Henri\\Documents\\projects\\c#\\little-game-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Henri\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,7 +43,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -52,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
         }
       }
     }
